@@ -8,7 +8,10 @@ app.get('/health', (req, resp) => {
     return resp.send('im a live')
 })
 
-// start servidor 
-app.listen(3000, () => {
-    console.log('Rocks!! on in port: 3000');
+// start servidor
+
+//configuracion puerto para heroku 
+var port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log('Rocks!! on in port:'+ port);
 });
