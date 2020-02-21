@@ -1,4 +1,4 @@
--- health basico --
-para correr app
-- npm start
-- servicio /health
+* health basico
+** run app port 3000
+*** npm start
+*** servicio /health
