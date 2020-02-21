@@ -4,8 +4,10 @@ const app = express();
 
 //metodo health
 app.get('/health', (req, resp) => {
-    console.log('call to endpoint health '+ (process.env.algo || 'sin secreto'));
-    return resp.send('im a live')
+
+    const envTest = process.env.algo || 'sin secreto'
+    console.log('call to endpoint health '+ envTest);
+    return resp.send('im a live '+ envTest)
 })
 
 // start servidor
